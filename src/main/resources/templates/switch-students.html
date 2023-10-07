@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch students</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/js/actions.js}"></script>
+</head>
+<body>
+<div class="containter">
+    <div class="row">
+
+    </div>
+</div>
+
+    <table>
+        <thead>
+            <th>
+                <td>role</td>
+            </th>
+            <tr th:each="student : ${students}">
+                <td th:switch="${student.role}">
+                    <p th:case="'ADMIN'"> User is the admin</p>
+                    <p th:case="'USER'">User is not the admin</p>
+                    <p th:case="*">Neither a user, nor an admin</p>
+                </td>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>
+

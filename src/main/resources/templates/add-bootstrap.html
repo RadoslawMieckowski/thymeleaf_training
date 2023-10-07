@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add-Bootstrap</title>
+    <link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-responsive table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Employee first name</th>
+                            <th>Employee last name</th>
+                            <th>Seniority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jan</td>
+                            <td>Kowalski</td>
+                            <td>senior</td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>Smith</td>
+                            <td>trainee</td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>junior</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

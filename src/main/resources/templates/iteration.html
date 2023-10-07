@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Iteration example</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <th>index</th>
+            <th>name</th>
+            <th>surname</th>
+            <th>email</th>
+        </thead>
+        <tbody>
+            <tr th:each = "student, studentStat : ${students}"
+                th:style = "${studentStat.odd}? 'background-color:powderblue; font-weight:bold;'"> <!--background-color nie działa!!-->
+                <td th:text = ${studentStat.index}></td>    <!--nazwa zmiennej + Stat-->
+                <td th:text ="${student.firstName}"></td>   <!--dlaczego można dostać się bez getterów?!-->
+                <td th:text ="${student.lastName}"></td>
+                <td th:text ="${student.age}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
